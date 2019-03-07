@@ -4,7 +4,7 @@ import { findDOMNode } from 'react-dom';
 import throttle from 'lodash.throttle';
 import raf from 'raf';
 import getDisplayName from 'react-display-name';
-import { Consumer as DragDropContextConsumer } from 'react-dnd/lib/DragDropContext';
+import { Consumer as DragDropContextConsumer } from 'react-dnd/lib/cjs/DragDropContext';
 import hoist from 'hoist-non-react-statics';
 import { noop, intBetween, getCoords } from './util';
 
