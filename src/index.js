@@ -236,6 +236,7 @@ export function createScrollingComponent(WrappedComponent) {
     render() {
       const {
         // not passing down these props
+        dragDropManager,
         strengthMultiplier,
         verticalStrength,
         horizontalStrength,
