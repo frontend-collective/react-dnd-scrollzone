@@ -1,6 +1,6 @@
 {
-  "name": "frontend-collective-react-dnd-scrollzone",
-  "version": "1.0.2",
+  "name": "@zenhubhq/react-dnd-scrollzone",
+  "version": "5.0.1",
   "description": "A cross browser solution to scrolling during drag and drop.",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "lint": "eslint src",
     "pretest": "npm run lint",
     "test": "mocha test",
-    "prepublish": "in-publish && npm run test && npm run build || not-in-publish",
+    "prepublish": "in-publish && npm run build || not-in-publish",
     "publish:major": "npm version major && npm publish",
     "publish:minor": "npm version minor && npm publish",
     "publish:patch": "npm version patch && npm publish",
@@ -16,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/frontend-collective/react-dnd-scrollzone"
+    "url": "https://github.com/ZenHubHQ/react-dnd-scrollzone"
   },
   "bugs": {
-    "url": "http://github.com/frontend-collective/react-dnd-scrollzone/issues"
+    "url": "https://github.com/ZenHubHQ/react-dnd-scrollzone/issues"
   },
   "keywords": [
     "react",
@@ -38,7 +38,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "hoist-non-react-statics": "^3.1.0",
+    "hoist-non-react-statics": "^3.3.0",
     "lodash.throttle": "^4.0.1",
     "prop-types": "^15.5.9",
     "raf": "^3.2.0",
@@ -60,15 +60,15 @@
     "eslint-plugin-react": "^7.11.1",
     "in-publish": "^2.0.0",
     "mocha": "^5.2.0",
-    "react": "^16.3.0",
-    "react-dnd": "^7.3.0",
-    "react-dom": "^16.3.0",
+    "react": "^16.8.6",
+    "react-dnd": "^8.0.3",
+    "react-dom": "^16.8.6",
     "sinon": "^7.1.1",
     "sinon-chai": "^3.2.0"
   },
   "peerDependencies": {
-    "react": "^16.3.0",
-    "react-dnd": "^7.3.0",
-    "react-dom": "^16.3.0"
+    "react": "^16.8.6",
+    "react-dnd": "^8.0.3",
+    "react-dom": "^16.8.6"
   }
 }

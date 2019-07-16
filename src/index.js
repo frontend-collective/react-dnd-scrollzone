@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import throttle from 'lodash.throttle';
 import raf from 'raf';
 import getDisplayName from 'react-display-name';
-import { DragDropContextConsumer } from 'react-dnd';
+import { DndContext } from 'react-dnd';
 import hoist from 'hoist-non-react-statics';
 import { noop, intBetween, getCoords } from './util';
 
@@ -240,7 +240,7 @@ export function createScrollingComponent(WrappedComponent) {
         verticalStrength,
         horizontalStrength,
         onScrollChange,
-
+        dragDropManager,
         ...props
       } = this.props;
 
@@ -258,13 +258,13 @@ export function createScrollingComponent(WrappedComponent) {
 
 export default function createScrollingComponentWithConsumer(WrappedComponent) {
   const ScrollingComponent = createScrollingComponent(WrappedComponent);
-  return props => (
-    <DragDropContextConsumer>
+  return forwardRef((props, ref) => (
+    <DndContext.Consumer>
       {({ dragDropManager }) => (
         dragDropManager === undefined
           ? null
-          : <ScrollingComponent {...props} dragDropManager={dragDropManager} />
+          : <ScrollingComponent {...props} ref={ref} dragDropManager={dragDropManager} />
       )}
-    </DragDropContextConsumer>
-  );
+    </DndContext.Consumer>
+  ));
 }
