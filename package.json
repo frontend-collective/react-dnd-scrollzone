@@ -61,14 +61,14 @@
     "in-publish": "^2.0.0",
     "mocha": "^5.2.0",
     "react": "^16.3.0",
-    "react-dnd": "^7.3.0",
+    "react-dnd": "^9.4.0",
     "react-dom": "^16.3.0",
     "sinon": "^7.1.1",
     "sinon-chai": "^3.2.0"
   },
   "peerDependencies": {
     "react": "^16.3.0",
-    "react-dnd": "^7.3.0",
+    "react-dnd": "^9.4.0",
     "react-dom": "^16.3.0"
   }
 }
